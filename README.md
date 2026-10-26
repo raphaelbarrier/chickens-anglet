@@ -1,13 +1,13 @@
-# Chicken's Anglet — V4, photos réalistes
+# Chicken’s Anglet V5 — site complet
 
-Site statique autonome pour GitHub et Vercel. Tous les fichiers sont inclus.
+Site statique autonome : `index.html`, `vercel.json` et `assets/`.
 
-1. Décompressez le ZIP.
-2. Dans GitHub, créez un nouveau dépôt ou remplacez les fichiers du dépôt existant.
-3. Déposez directement à la racine : `index.html`, `vercel.json`, `README.md` et le dossier `assets`.
-4. Sur Vercel, importez le dépôt ou attendez son redéploiement. Framework Preset : Other. Root Directory : `./`. Output Directory : vide.
+## Déploiement
+Décompresser le ZIP, déposer tous les fichiers et le dossier `assets` à la racine du dépôt GitHub, puis importer sur Vercel (Framework : Other ; Root Directory : `./`).
 
-Les photographies de produits sont des illustrations générées par IA et ne représentent pas nécessairement les plats exacts du restaurant. La photo d'intérieur est issue du matériel fourni.
-Le formulaire prépare une commande à copier ; il n'envoie pas de commande réelle.
-Le numéro officiel de téléphone reste à renseigner après vérification auprès du restaurant.
-Vérifier les tarifs et horaires avant mise en production.
+## Commandes et paiements
+Le panier et le bon de commande fonctionnent dans le navigateur. **Aucune commande n’est envoyée au restaurant.** Le bon peut être copié pour demander une confirmation. Le paiement en ligne (carte/PayPal/Apple Pay) est visible comme futur moyen de paiement, mais désactivé : aucune donnée bancaire n’est collectée.
+
+Pour activer les commandes réelles, connecter un backend avec stockage des commandes, notifications au restaurant et suivi des statuts. Pour les paiements, créer les comptes marchands Stripe et/ou PayPal, utiliser leurs pages de paiement hébergées, puis vérifier les webhooks côté serveur avant de confirmer la commande. Ne jamais intégrer une clé secrète dans `index.html`.
+
+Les images des plats sont des illustrations générées par IA. Prix et horaires à confirmer auprès du restaurant avant publication officielle.
